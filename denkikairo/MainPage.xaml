@@ -1,7 +1,100 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="denkikairo.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+﻿<!--?xml version="1.0"encoding="utf-8"?-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="denkikairo.MainPage">
+    <StackLayout Orientation="Vertical"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+
+        <!--入力-->
+        <Label Text="input1"
+               FontSize="Large"/>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Center">
+            <Entry x:Name="num1"
+                   FontSize="Large"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand"
+                   TextChanged="OnEntryTextChanged"/>
+            <Label Text="+"
+                   FontSize="Large"/>
+            <Entry x:Name="numi1"
+                   FontSize="Large"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand"
+                   TextChanged="OnEntryTextChanged"/>
+            <Label Text="i"
+                   FontSize="Large"/>
+        </StackLayout>
+
+        <Label Text="input2"
+               FontSize="Large"/>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Center">
+            <Entry x:Name="num2"
+                   FontSize="Large"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand"
+                   TextChanged="OnEntryTextChanged"/>
+            <Label Text="+"
+                   FontSize="Large"/>
+            <Entry x:Name="numi2"
+                   FontSize="Large"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand"
+                   TextChanged="OnEntryTextChanged"/>
+            <Label Text="i"
+                   FontSize="Large"/>
+        </StackLayout>
+
+        <!--計算用のボタン-->
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <Button x:Name="add"
+                    Text=" plus "
+                    FontSize="Large"
+                    Clicked="solveAdd"/>
+            <Button x:Name="sub"
+                    Text=" minus "
+                    FontSize="Large"
+                    Clicked="solveSub"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <Button x:Name="mul"
+                    Text=" multiply "
+                    FontSize="Large"
+                    class="solveMul"/>
+            <Button x:Name="div"
+                    Text=" divide "
+                    FontSize="Large"
+                    Clicked="solveDiv"/>
+        </StackLayout>
+
+        <!--出力-->
+        <StackLayout Orientation="Vertical">
+            <Label Text="複素数表示"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="conplexNum"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="フェーザ表示"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="phaser"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
     </StackLayout>
 </ContentPage>
