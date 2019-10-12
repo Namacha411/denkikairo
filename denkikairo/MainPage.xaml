@@ -22,6 +22,7 @@
                    TextChanged="OnEntryTextChanged"/>
             <Label Text="+"
                    FontSize="Large"/>
+
             <Entry x:Name="numi1"
                    FontSize="Large"
                    Keyboard="Numeric"
@@ -43,6 +44,7 @@
                    TextChanged="OnEntryTextChanged"/>
             <Label Text="+"
                    FontSize="Large"/>
+
             <Entry x:Name="numi2"
                    FontSize="Large"
                    Keyboard="Numeric"
@@ -60,6 +62,7 @@
                     Text=" plus "
                     FontSize="Large"
                     Clicked="solveAdd"/>
+
             <Button x:Name="sub"
                     Text=" minus "
                     FontSize="Large"
@@ -72,7 +75,8 @@
             <Button x:Name="mul"
                     Text=" multiply "
                     FontSize="Large"
-                    class="solveMul"/>
+                    Clicked="solveMul"/>
+
             <Button x:Name="div"
                     Text=" divide "
                     FontSize="Large"

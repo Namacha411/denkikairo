@@ -16,7 +16,7 @@ namespace denkikairo
 	{
 		public MainPage()
 		{
-            Title = "Solve complex and phaser";
+            Title = "Solve complex number and phaser";
 			InitializeComponent();
 
             add.IsEnabled = false;
@@ -61,7 +61,7 @@ namespace denkikairo
             Complex complex1 = new Complex(n1, ni1);
             Complex complex2 = new Complex(n2, ni2);
 
-            Complex ans = complex1 + complex2;
+            Complex ans = Complex.Add(complex1, complex2);
 
             conplexNum.Text = string.Format(new ComplexFormatter(), "{0:J3}", ans);
 
@@ -81,7 +81,7 @@ namespace denkikairo
             Complex complex1 = new Complex(n1, ni1);
             Complex complex2 = new Complex(n2, ni2);
 
-            Complex ans = complex1 - complex2;
+            Complex ans = Complex.Subtract(complex1, complex2);
 
             conplexNum.Text = string.Format(new ComplexFormatter(), "{0:J3}", ans);
 
@@ -101,7 +101,7 @@ namespace denkikairo
 			Complex complex1 = new Complex(n1, ni1);
 			Complex complex2 = new Complex(n2, ni2);
 
-			Complex ans = complex1 / complex2;
+            Complex ans = Complex.Divide(complex1, complex2);
 
 			conplexNum.Text = string.Format(new ComplexFormatter(), "{0:J3}", ans);
 
@@ -121,7 +121,7 @@ namespace denkikairo
             Complex complex1 = new Complex(n1, ni1);
             Complex complex2 = new Complex(n2, ni2);
 
-            Complex ans = complex1 * complex2;
+            Complex ans = Complex.Multiply(complex1, complex2);
 
             conplexNum.Text = string.Format(new ComplexFormatter(), "{0:J3}", ans);
 
